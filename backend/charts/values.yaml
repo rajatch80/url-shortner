@@ -4,20 +4,20 @@
 
 replicaCount: 2
 image:
-  repository: rajatchdocker/url-shortner-backend
+  repository: 0xbool/url-shortner-backend
   pullPolicy: IfNotPresent
-  tag: "latest"
+  tag: "v0"
 service:
   type: LoadBalancer
   port: 3333
   targetPort: 3333
   protocol: TCP
   name: url-shortner-backend
-resources: {}
-limits:
+resources:
+  limits:
     cpu: 100m
     memory: 256Mi
-requests:
+  requests:
     cpu: 100m
     memory: 256Mi
 autoscaling:
